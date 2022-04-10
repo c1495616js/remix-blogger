@@ -1,6 +1,5 @@
-import haskell from 'highlight.js/lib/languages/haskell';
+// import haskell from 'highlight.js/lib/languages/haskell';
 import parseFrontMatter from 'front-matter';
-
 import { bundleMDX } from './mdx.server';
 import { join, readFile, readdir } from './fs.server';
 
@@ -28,6 +27,9 @@ export async function getPost(slug: string) {
 
   const { default: rehypeToc } = await import('rehype-toc');
   const { default: rehypeSlug } = await import('rehype-slug');
+  const { default: haskell } = await import(
+    'highlight.js/lib/languages/haskell'
+  );
 
   const post = await bundleMDX({
     source,

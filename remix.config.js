@@ -15,5 +15,5 @@ module.exports = {
   //     rehypePlugins: [rehypeHighlight],
   //   };
   // },
-  serverDependenciesToBundle: [/^rehype.*/, /^remark.*/, /^unified.*/],
+  // serverDependenciesToBundle: [/^rehype.*/, /^remark.*/],
 };
